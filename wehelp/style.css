@@ -1,0 +1,183 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Serif TC", serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/*IE隱藏滾動條*/
+body {
+  -ms-overflow-style: none;
+}
+
+.wrap {
+  background-image: url(alessio-soggetti-gdE-5Oui1Y0-unsplash.jpg);
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 9.6rem 0;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  background-attachment: scroll;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4.8rem;
+
+  color: #fff;
+}
+
+.form {
+  margin-top: 9.6rem;
+  padding: 0 2rem;
+}
+
+.questions {
+  padding: 2rem 4rem;
+  margin: 2rem 0;
+  border: 1px solid #525252;
+  border-radius: 1.6rem;
+
+  color: #fff;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.icon {
+  padding-right: 2rem;
+
+  transition: all 0.3s;
+}
+
+.question:hover .icon {
+  transform: scale(1.2);
+}
+
+.question p {
+  font-size: 2rem;
+}
+
+.answer {
+  margin-top: 2.4rem;
+  padding: 2rem 4.4rem;
+
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 1.6rem;
+  color: #000;
+
+  display: none;
+}
+
+.answer p,
+.answer ul li {
+  font-size: 1.7rem;
+  line-height: 1.5;
+}
+
+.answer ul li {
+  list-style: inside;
+  padding-top: 1rem;
+}
+
+.answer p:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.emphasis {
+  font-size: 2rem;
+  white-space: pre-wrap;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.answer p span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 0 0.5rem;
+}
+
+.project {
+  text-decoration: none;
+  color: #525252;
+}
+
+/*只要有showText的q方格，該answer就會顯示*/
+.show-text .answer {
+  display: block;
+}
+
+.icon-open {
+  display: block;
+}
+
+.icon-close {
+  display: none;
+}
+
+/*show-text 中的icon-open消失*/
+.show-text .icon-open {
+  display: none;
+}
+
+/*show-text 中的icon-close出現*/
+.show-text .icon-close {
+  display: block;
+}
+
+/*時間表*/
+.timetable {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: 2.4rem;
+}
+
+.timetable-first,
+.timetable-second {
+  width: 40rem;
+  border: 1px solid #f2f2f2;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.answer .point {
+  font-size: 2.4rem;
+}
+
+.no-show {
+  cursor: auto;
+  text-decoration: line-through;
+}
+
+.no-show .answer {
+  display: none;
+}
